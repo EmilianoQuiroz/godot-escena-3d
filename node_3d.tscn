@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cecpkk1qm87kj"]
+
+[ext_resource type="ArrayMesh" uid="uid://brxyxqja8hxp6" path="res://GodotActionRPG-Assets/Models/Environment/naturePack_001.obj" id="1_2gf6x"]
+[ext_resource type="ArrayMesh" uid="uid://pe67gfgpi5je" path="res://GodotActionRPG-Assets/Models/Environment/naturePack_019.obj" id="2_84cgv"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kvbry"]
+data = PackedVector3Array(0, 0, 0, 3, 0.3, 0, 3, 0, 0, 3, 0.3, 0, 0, 0, 0, 0, 0.3, 0, 0, 0.3, -3, 3, 0.3, 0, 0, 0.3, 0, 3, 0.3, 0, 0, 0.3, -3, 3, 0.3, -3, 3, 0, -3, 3, 0.3, 0, 3, 0.3, -3, 3, 0.3, 0, 3, 0, -3, 3, 0, 0, 3, 0, -3, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, -3, 0, 0, -3, 0, 0.3, -3, 0, 0, 0, 0, 0, -3, 0, 0, 0, 0, 0.3, -3, 0, 0.3, 0, 3, 0, -3, 0, 0.3, -3, 0, 0, -3, 0, 0.3, -3, 3, 0, -3, 3, 0.3, -3)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="NaturePack001" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, -15, 0, 15)
+mesh = ExtResource("1_2gf6x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NaturePack001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NaturePack001/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_kvbry")
+
+[node name="NaturePack019" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -9.30173, 0.300001, 7.4821)
+mesh = ExtResource("2_84cgv")
